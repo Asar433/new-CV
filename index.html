@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Asar Iqbal | Automotive Engineering, Operations, Automation & Data</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Asar Iqbal, an Automotive Engineering graduate with experience across manufacturing operations, automation, data, product and commercial problem-solving."
+  >
+
+  <style>
+    :root {
+      --navy: #0b1f33;
+      --navy-light: #14314d;
+      --blue: #1769aa;
+      --blue-light: #eaf4fb;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --border: #dce3ea;
+      --background: #f6f8fa;
+      --white: #ffffff;
+      --success: #0b6e4f;
+      --shadow: 0 10px 30px rgba(11, 31, 51, 0.08);
+      --max-width: 1180px;
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-download {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 10px 16px;
+      border-radius: 9px;
+      transition: 0.2s ease;
+    }
+
+    .nav-download:hover {
+      background: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    header {
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(23, 105, 170, 0.12),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #f5f9fc 100%
+        );
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero {
+      min-height: 560px;
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 55px;
+      align-items: center;
+      padding: 88px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      margin-bottom: 22px;
+    }
+
+    .hero-role {
+      color: var(--navy-light);
+      font-weight: 700;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 1.03rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .button-primary:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      background: var(--white);
+      border-color: var(--border);
+      color: var(--navy);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .contact-line {
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .contact-line a:hover {
+      color: var(--blue);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .stat {
+      min-height: 140px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .stat strong {
+      color: var(--navy);
+      font-size: 1.7rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.4;
+    }
+
+    .stat.highlight {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .stat.highlight strong,
+    .stat.highlight span {
+      color: var(--white);
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--white);
+    }
+
+    .section-heading {
+      margin-bottom: 42px;
+      max-width: 780px;
+    }
+
+    .section-heading .label {
+      color: var(--blue);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .experience-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .experience-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 4px 18px rgba(11, 31, 51, 0.04);
+    }
+
+    section:nth-of-type(even) .experience-card {
+      background: var(--background);
+    }
+
+    .experience-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 25px;
+      margin-bottom: 20px;
+    }
+
+    .company {
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .experience-card h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .date {
+      flex-shrink: 0;
+      padding: 7px 12px;
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .experience-card ul {
+      padding-left: 20px;
+    }
+
+    .experience-card li {
+      margin: 9px 0;
+      color: #394555;
+    }
+
+    .experience-card li::marker {
+      color: var(--blue);
+    }
+
+    .key-result {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 26px;
+      border-radius: var(--radius);
+    }
+
+    .skill-card h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 13px;
+    }
+
+    .tag {
+      background: var(--blue-light);
+      color: var(--navy-light);
+      padding: 6px 10px;
+      border-radius: 7px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .project-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+    }
+
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .project-type {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    .education-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+
+    .degree {
+      font-weight: 700;
+      color: var(--navy-light);
+      margin-bottom: 7px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+    }
+
+    .additional-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .additional-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+    }
+
+    .additional-card h3 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .additional-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .cta-section {
+      padding-top: 55px;
+      padding-bottom: 80px;
+    }
+
+    .cta {
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy) 0%,
+          var(--navy-light) 100%
+        );
+
+      padding: 48px;
+      border-radius: 22px;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      color: var(--white);
+      font-size: 2rem;
+      margin-bottom: 9px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 660px;
+    }
+
+    .cta .button {
+      background: var(--white);
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    .cta .button:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      padding: 30px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 40px;
+        padding: 68px 0;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project-grid,
+      .additional-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links a:not(.nav-download) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      section {
+        padding: 65px 0;
+      }
+
+      .nav-inner {
+        min-height: 64px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        padding: 18px;
+        min-height: 125px;
+      }
+
+      .stat strong {
+        font-size: 1.4rem;
+      }
+
+      .experience-top {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-card {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+      }
+
+      .experience-card,
+      .project-card,
+      .skill-card,
+      .education-card,
+      .additional-card {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .nav-download {
+        padding: 9px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#top" class="brand">
+        Asar Iqbal
+      </a>
+
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+
+        <a
+          class="nav-download"
+          href="Asar_Iqbal_CV_Updated_Tech.docx"
+          download
+        >
+          Download CV
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <header id="top">
+
+    <div class="container hero">
+
+      <div>
+
+        <span class="eyebrow">
+          Automotive Engineering · Operations · Automation · Data · Product
+        </span>
+
+        <h1>Asar Iqbal</h1>
+
+        <div class="hero-role">
+          Automotive Engineering Graduate & Production Planner
+        </div>
+
+        <p class="hero-description">
+          Automotive Engineering graduate combining manufacturing operations,
+          automation, data and product/commercial problem-solving. Currently a
+          PHINIA Production Planner automating SAP and Excel workflows using
+          Power Automate and scripting, while developing a Python/ML model to
+          support Sales and Operations alignment on production decisions.
+          Previously delivered £900k+ savings through SAP and data development,
+          £237k/year recurring savings, a 71% productivity uplift and completed
+          a 0-to-1 product, GTM and growth programme through Common Path.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#experience" class="button button-primary">
+            View Experience
+          </a>
+
+          <a href="#projects" class="button button-secondary">
+            View Projects
+          </a>
+
+          <a
+            href="Asar_Iqbal_CV_Updated_Tech.docx"
+            class="button button-secondary"
+            download
+          >
+            Download CV
+          </a>
+
+        </div>
+
+        <div class="contact-line">
+          <a
+            href="https://uk.linkedin.com/in/asar-iqbal-34a1281b9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-stats">
+
+        <div class="stat highlight">
+          <strong>£900k+</strong>
+          <span>
+            Savings identified through SAP-driven data and PC&amp;L analysis
+          </span>
+        </div>
+
+        <div class="stat">
+          <strong>£237k/year</strong>
+          <span>
+            Recurring savings through labour optimisation and lean redesign
+          </span>
+        </div>
+
+        <div class="stat">
+          <strong>71%</strong>
+          <span>
+            Productivity uplift from operational change projects
+          </span>
+        </div>
+
+        <div class="stat">
+          <strong>5–8 mins</strong>
+          <span>
+            Automated a daily process previously taking roughly 45 minutes–2 hours
+          </span>
+        </div>
+
+        <div class="stat">
+          <strong>30%+</strong>
+          <span>
+            Throughput increase through bottleneck and sensitivity analysis
+          </span>
+        </div>
+
+        <div class="stat">
+          <strong>£132k</strong>
+          <span>
+            Annual savings delivered during placement engineering projects
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section id="experience">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="label">
+            Experience
+          </div>
+
+          <h2>
+            Operations, automation, engineering and product experience
+          </h2>
+
+          <p class="section-intro">
+            Experience spanning production planning, lean engineering,
+            manufacturing data, process automation, product discovery,
+            commercial experimentation and customer-facing work.
+          </p>
+
+        </div>
+
+        <div class="experience-grid">
+
+          <article class="experience-card">
+
+            <div class="experience-top">
+
+              <div>
+                <div class="company">
+                  PHINIA Delphi · Global Automotive Parts Manufacturer
+                </div>
+
+                <h3>
+                  Production Planner
+                </h3>
+
+                <div class="location">
+                  Stonehouse, UK
+                </div>
+              </div>
+
+              <div class="date">
+                June 2026 – Present
+              </div>
+
+            </div>
+
+            <ul>
+              <li>
+                Own daily production planning in a high-pressure manufacturing
+                environment where planning accuracy protects plant continuity,
+                coordinating priorities across Operations, Logistics, Sales
+                and Production.
+              </li>
+
+              <li>
+                Automate recurring SAP and Excel planning/reporting workflows
+                using Power Automate and scripting;
+                <span class="key-result">
+                  a recently completed daily process was reduced from
+                  approximately 45 minutes–2 hours to 5–8 minutes.
+                </span>
+              </li>
+
+              <li>
+                Currently developing a Python/ML model to create an alignment
+                output supporting Sales and Operations in agreeing which parts
+                Production should manufacture, aiming to reduce manual
+                decision-making and strengthen data-led planning.
+              </li>
+
+              <li>
+                Apply lean and data-driven problem solving to live constraints,
+                improving planning visibility, consistency and production flow
+                in a fast-changing environment.
+              </li>
+            </ul>
+
+          </article>
+
+          <article class="experience-card">
+
+            <div class="experience-top">
+              <div>
+                <div class="company">Common Path</div>
+                <h3>Product &amp; Startup Programme</h3>
+              </div>
+
+              <div class="date">2026</div>
+            </div>
+
+            <ul>
+              <li>
+                Took Leo, a consumer personal-finance proposition, through a
+                0-to-1 product cycle by conducting customer discovery,
+                applying The Mom Test, synthesising behavioural insights and
+                defining a need around the future impact of individual
+                spending decisions.
+              </li>
+
+              <li>
+                Designed and rapidly prototyped a Purchase Decision Assistant
+                in Lovable, translating research into an MVP with affordability,
+                emergency-buffer and savings-goal scenario logic, then
+                iterating the UX from direct user feedback.
+              </li>
+
+              <li>
+                Executed an early GTM experiment across direct outreach and
+                Reddit;
+                <span class="key-result">
+                  3 people progressed to calls and 2 to product demos,
+                </span>
+                with both indicating repeat-use interest and some willingness
+                to pay.
+              </li>
+
+              <li>
+                Built a quantitative growth strategy to move Leo from
+                approximately
+                <span class="key-result">
+                  2,000 waitlist users toward 10,000 active users within
+                  12 months,
+                </span>
+                modelling activation, acquisition, referral, conversion and
+                retention assumptions.
+              </li>
+
+              <li>
+                Researched high-growth startups across FinTech, cybersecurity,
+                maritime technology and AI, identifying product whitespace and
+                developing tailored Lovable concepts for Vertice, CybPass and
+                CETO ahead of founder conversations.
+              </li>
+            </ul>
+
+          </article>
+
+          <article class="experience-card">
+
+            <div class="experience-top">
+
+              <div>
+                <div class="company">PHINIA Delphi</div>
+                <h3>Summer Intern &amp; Lean Engineer</h3>
+                <div class="location">Stonehouse, UK</div>
+              </div>
+
+              <div class="date">
+                June 2025 – May 2026
+              </div>
+
+            </div>
+
+            <ul>
+              <li>
+                Returned after placement for a summer internship, developing
+                visual-management tooling to standardise plant operations,
+                before continuing into Lean Engineering.
+              </li>
+
+              <li>
+                Developed SAP-driven data and PC&amp;L analysis to identify
+                excess inventory, improve planning visibility and unlock
+                <span class="key-result">
+                  £900k+ in savings.
+                </span>
+              </li>
+
+              <li>
+                Led capacity and demand modelling using WCT/WELS analysis and
+                machine balancing to quantify operational risk and identify
+                surplus versus constrained capacity.
+              </li>
+
+              <li>
+                Delivered
+                <span class="key-result">
+                  £237k/year recurring savings
+                </span>
+                through labour optimisation, scenario-based shift modelling
+                and lean operating-system redesign.
+              </li>
+
+              <li>
+                Translated complex datasets into clear recommendations for
+                senior stakeholders while coordinating two engineering
+                technicians and delivering under time constraints.
+              </li>
+            </ul>
+
+          </article>
+
+          <article class="experience-card">
+
+            <div class="experience-top">
+
+              <div>
+                <div class="company">PHINIA Delphi</div>
+                <h3>Placement Engineer</h3>
+                <div class="location">Stonehouse, UK</div>
+              </div>
+
+              <div class="date">
+                September 2023 – August 2024
+              </div>
+
+            </div>
+
+            <ul>
+              <li>
+                Delivered two operational change projects by analysing
+                17 KPIs, redesigning workflows and managing delivery risk,
+                achieving a
+                <span class="key-result">
+                  71% productivity uplift and £132k annual savings.
+                </span>
+              </li>
+
+              <li>
+                Designed SQL-driven Grafana dashboards for real-time
+                performance monitoring, improving governance, auditability and
+                early risk detection.
+              </li>
+
+              <li>
+                Conducted bottleneck and sensitivity analysis using SolidWorks
+                layouts,
+                <span class="key-result">
+                  increasing throughput by 30%+.
+                </span>
+              </li>
+
+              <li>
+                Presented technical and financial findings to global
+                stakeholders and was awarded partial sponsorship for
+                outstanding analytical and leadership performance.
+              </li>
+            </ul>
+
+          </article>
+
+          <article class="experience-card">
+
+            <div class="experience-top">
+
+              <div>
+                <div class="company">
+                  Euro Car Parts · Sainsbury · Shell
+                </div>
+
+                <h3>
+                  Part-time Customer Assistant
+                </h3>
+
+                <div class="location">
+                  Nottingham, UK
+                </div>
+              </div>
+
+              <div class="date">
+                Jun 2022 – Sep 2023 · Aug 2024 – Present
+              </div>
+
+            </div>
+
+            <ul>
+              <li>
+                Delivered 80+ daily customer interactions, using consultative
+                questioning to recommend tailored automotive parts and
+                solutions while balancing accuracy, speed and compliance.
+              </li>
+
+              <li>
+                Drove promotional sales performance,
+                <span class="key-result">
+                  achieving a 15% bonus for leading regional performance
+                </span>
+                in targeted product incentives.
+              </li>
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="label">Skills</div>
+          <h2>Technical, analytical and commercial capability</h2>
+          <p class="section-intro">
+            A mix of engineering, data, automation, product and operational
+            problem-solving skills developed across manufacturing and
+            self-directed projects.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3>Data &amp; Analytics</h3>
+            <div class="skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Excel / VBA</span>
+              <span class="tag">Grafana</span>
+              <span class="tag">MATLAB</span>
+              <span class="tag">KPI Modelling</span>
+              <span class="tag">Scenario Analysis</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Automation &amp; Systems</h3>
+            <div class="skill-tags">
+              <span class="tag">Power Automate</span>
+              <span class="tag">SAP</span>
+              <span class="tag">n8n</span>
+              <span class="tag">Scripting</span>
+              <span class="tag">Proxmox</span>
+              <span class="tag">Networking Fundamentals</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Engineering</h3>
+            <div class="skill-tags">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">AutoCAD</span>
+              <span class="tag">NX</span>
+              <span class="tag">Kaizen</span>
+              <span class="tag">5S</span>
+              <span class="tag">VSM</span>
+              <span class="tag">Capacity Modelling</span>
+              <span class="tag">Root Cause Analysis</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Product &amp; Commercial</h3>
+            <div class="skill-tags">
+              <span class="tag">Product Discovery</span>
+              <span class="tag">Customer Research</span>
+              <span class="tag">GTM Experimentation</span>
+              <span class="tag">Lovable</span>
+              <span class="tag">Growth Modelling</span>
+              <span class="tag">Customer Insight Synthesis</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Professional</h3>
+            <p>
+              Product and commercial thinking, stakeholder communication,
+              cross-functional collaboration, high-pressure production
+              planning and executive presentation.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <p>
+              English, Hindi, Urdu and Punjabi — Fluent.
+              German and Turkish — Basic.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="label">Projects</div>
+          <h2>Engineering, machine learning and technology projects</h2>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <span class="project-type">Final Year Project</span>
+            <h3>Road Hazard Detection Using Machine Learning</h3>
+            <p>
+              Built a real-time road hazard detection system using Python,
+              YOLO-World, Kalman filtering and ZoeDepth, strengthening skills
+              in probabilistic thinking, modelling uncertainty and
+              data-driven decision-making.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Engineering Project</span>
+            <h3>Autonomous Pothole-Filler Vehicle Concept</h3>
+            <p>
+              Developed an autonomous pothole-filler vehicle concept covering
+              battery pack design, cooling routing and CAD layout.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">AI &amp; Cloud</span>
+            <h3>Tech500 Car-Themed AI Application</h3>
+            <p>
+              Built a car-themed AI application using GitHub Copilot and
+              Azure AI tools through the UpReach Tech500 Bootcamp, gaining
+              exposure to agentic AI, cloud architecture and cybersecurity
+              principles.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Data Analytics</span>
+            <h3>Humanity First Convention Analytics</h3>
+            <p>
+              Built Power BI dashboards using SQL and DAX to track
+              46,000+ attendees, identifying peak-risk periods and using
+              trend analysis to reduce congestion.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Infrastructure &amp; Automation</span>
+            <h3>Home Server &amp; Automation Environment</h3>
+            <p>
+              Built a Proxmox home server and developed practical capability
+              across virtualisation, networking, firewall configuration,
+              switch connectivity, Power Automate, n8n and scripting-based
+              workflow automation.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Entrepreneurship</span>
+            <h3>Commercial Ventures</h3>
+            <p>
+              Founded a sneaker resale venture generating £9k profit in
+              six months and a vehicle repair service generating £3.8k in
+              three months, demonstrating commercial judgement, pricing risk
+              assessment and cash-flow management.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="leadership">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="label">Leadership &amp; Development</div>
+          <h2>Hackathons, insight programmes and continued learning</h2>
+        </div>
+
+        <div class="additional-grid">
+
+          <article class="additional-card">
+            <h3>Microsoft, Man Group &amp; McKinsey / SkillStruct</h3>
+            <p>
+              Participated in technology hackathons and insight programmes,
+              applying data analysis, rapid solution design and client-style
+              problem solving.
+            </p>
+          </article>
+
+          <article class="additional-card">
+            <h3>Amazon Step-up Work Experience</h3>
+            <p>
+              Built a prototype CV-matching application aligned to Amazon
+              Leadership Principles.
+            </p>
+          </article>
+
+          <article class="additional-card">
+            <h3>UpReach Tech500 Bootcamp</h3>
+            <p>
+              Built a car-themed AI application using GitHub Copilot and
+              Azure AI tools, gaining exposure to agentic AI, cloud
+              architecture and cybersecurity principles.
+            </p>
+          </article>
+
+          <article class="additional-card">
+            <h3>Self-Directed Cybersecurity &amp; Automation Learning</h3>
+            <p>
+              Developed practical capability across virtualisation,
+              networking, firewall configuration, switch connectivity,
+              Power Automate, n8n and scripting-based workflow automation.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="education">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="label">Education</div>
+          <h2>Academic background</h2>
+        </div>
+
+        <article class="education-card">
+          <div>
+            <h3>Loughborough University</h3>
+            <div class="degree">BEng Automotive Engineering · 2:1</div>
+            <p>Loughborough, UK</p>
+            <p>
+              Final Year Project: Road Hazard Detection Using Machine Learning
+              using Python, YOLO-World, Kalman filtering and ZoeDepth.
+            </p>
+          </div>
+          <div class="date">2021 – 2025</div>
+        </article>
+
+        <article class="education-card">
+          <div>
+            <h3>Bluecoat Academy</h3>
+            <div class="degree">A-levels</div>
+            <p>Mathematics (A*), Physics (B), Chemistry (B)</p>
+            <p>Nottingham, UK</p>
+          </div>
+          <div class="date">2019 – 2021</div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section id="associations">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="label">Associations</div>
+          <h2>Professional communities</h2>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-tags">
+            <span class="tag">SEO London</span>
+            <span class="tag">93% Club</span>
+            <span class="tag">UpReach</span>
+            <span class="tag">The Sutton Trust</span>
+            <span class="tag">Bright Network</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Interested in my experience?</h2>
+            <p>
+              Download my full CV for a concise overview of my engineering,
+              manufacturing, automation, data and product experience.
+            </p>
+          </div>
+
+          <a
+            href="Asar_Iqbal_CV_Updated_Tech.docx"
+            class="button"
+            download
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Asar Iqbal · Automotive Engineering · Operations · Automation · Data
+    </div>
+  </footer>
+
+</body>
+</html>
